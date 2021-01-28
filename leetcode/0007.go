@@ -1,17 +1,20 @@
 package leetcode
 
-import "math"
-
 func reverse(x int) int {
-	ret := 0
-
-	for value := x; value != 0; value /= 10 {
-		ret = ret*10 + value%10
+	sig, val, ret := 1, x, 0
+	if val < 0 {
+		sig = -1
+		val = 0 - x
 	}
 
-	if ret < math.MinInt32 || ret > math.MaxInt32 {
+	for val > 0 {
+		ret = ret * 10 + val % 10
+		val = val / 10
+	}
+
+	if ret >= 1 << 31 {
 		return 0
 	}
 
-	return ret
+	return ret * sig
 }
