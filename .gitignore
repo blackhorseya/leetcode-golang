@@ -3,6 +3,12 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,macos,linux,vim,intellij+all,vscode,go
 
 ### Go ###
+# Build
+bin
+
+# Code coverage
+coverage.txt
+
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -134,7 +140,8 @@ modules.xml
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
