@@ -1,4 +1,4 @@
-package problem_0053
+package problem
 
 func maxSubArray(nums []int) int {
 	if len(nums) == 0 {

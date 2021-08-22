@@ -1,4 +1,4 @@
-package problem_0283
+package problem
 
 func moveZeroes(nums []int) {
 	lastNonZero := 0

@@ -1,4 +1,4 @@
-package problem_0190
+package problem
 
 func reverseBits(num uint32) uint32 {
 	var (

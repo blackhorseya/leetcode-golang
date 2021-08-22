@@ -1,4 +1,4 @@
-package problem_0007
+package problem
 
 func reverse(x int) int {
 	sig, val, ret := 1, x, 0

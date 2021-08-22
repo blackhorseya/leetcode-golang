@@ -1,4 +1,4 @@
-package problem_0350
+package problem
 
 import "sort"
 
@@ -9,7 +9,7 @@ func intersect(nums1 []int, nums2 []int) []int {
 
 	maps := make(map[int]int)
 	for _, num := range nums1 {
-		maps[num] += 1
+		maps[num]++
 	}
 
 	var ret []int
@@ -17,7 +17,7 @@ func intersect(nums1 []int, nums2 []int) []int {
 		count, ok := maps[num]
 		if ok && count != 0 {
 			ret = append(ret, num)
-			maps[num] -= 1
+			maps[num]--
 		}
 	}
 

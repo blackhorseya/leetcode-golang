@@ -1,4 +1,4 @@
-package problem_0013
+package problem
 
 var (
 	lookup = map[string]int{

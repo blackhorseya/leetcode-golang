@@ -1,4 +1,4 @@
-package problem_0326
+package problem
 
 const base = 3
 

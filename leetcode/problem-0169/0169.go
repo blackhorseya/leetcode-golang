@@ -1,9 +1,9 @@
-package problem_0169
+package problem
 
 func majorityElement(nums []int) int {
 	m := make(map[int]int)
 	for _, num := range nums {
-		m[num] += 1
+		m[num]++
 	}
 
 	ret, max := 0, 0

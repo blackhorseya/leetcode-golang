@@ -5,6 +5,7 @@ import (
 	"strings"
 )
 
+// ListNode declare ListNode
 type ListNode struct {
 	Val  int
 	Next *ListNode
@@ -20,6 +21,7 @@ func (l *ListNode) String() string {
 	return strings.Join(ret, ",")
 }
 
+// NewListNodeFromInts create a list node from int slice
 func NewListNodeFromInts(numbers []int) *ListNode {
 	ret := &ListNode{}
 	next := ret

@@ -1,4 +1,4 @@
-package problem_0046
+package problem
 
 func permute(nums []int) [][]int {
 	var ret [][]int

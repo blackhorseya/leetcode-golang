@@ -1,4 +1,4 @@
-package problem_0070
+package problem
 
 func climbStairs(n int) int {
 	a, b := 1, 1

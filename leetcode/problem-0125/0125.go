@@ -1,13 +1,13 @@
-package problem_0125
+package problem
 
 import "strings"
 
 func isAlphanumeric(b byte) bool {
 	if b >= 'a' && b <= 'z' || b >= '0' && b <= '9' {
 		return true
-	} else {
-		return false
 	}
+
+	return false
 }
 
 func isPalindrome(s string) bool {

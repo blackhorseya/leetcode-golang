@@ -1,4 +1,4 @@
-package problem_0202
+package problem
 
 func isHappy(n int) bool {
 	sum, mod := 0, 0
@@ -9,7 +9,7 @@ func isHappy(n int) bool {
 
 	if sum < 10 && sum == mod*mod {
 		return sum == 1
-	} else {
-		return isHappy(sum)
 	}
+
+	return isHappy(sum)
 }

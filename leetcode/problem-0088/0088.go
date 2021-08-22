@@ -1,4 +1,4 @@
-package problem_0088
+package problem
 
 func merge(nums1 []int, m int, nums2 []int, n int) {
 	ret := make([]int, len(nums1))

@@ -1,4 +1,4 @@
-package problem_0171
+package problem
 
 func titleToNumber(s string) int {
 	col := 0

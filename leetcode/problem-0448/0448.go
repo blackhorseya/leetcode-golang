@@ -1,9 +1,9 @@
-package problem_0448
+package problem
 
 func findDisappearedNumbers(nums []int) []int {
 	l := make([]int, len(nums) + 1)
 	for _, num := range nums {
-		l[num] += 1
+		l[num]++
 	}
 
 	var ret []int

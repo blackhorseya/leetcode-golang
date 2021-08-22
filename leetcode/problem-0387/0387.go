@@ -1,4 +1,4 @@
-package problem_0387
+package problem
 
 func firstUniqChar(s string) int {
 	m := make([]int, 26)

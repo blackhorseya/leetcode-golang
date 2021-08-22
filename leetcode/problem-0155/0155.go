@@ -1,52 +1,59 @@
-package problem_0155
+package problem
 
 import "math"
 
+// Node ...
 type Node struct {
 	Value int
 	Min   int
 }
 
+// MinStack ...
 type MinStack struct {
 	Nodes []*Node
 }
 
+// Constructor ...
 func Constructor() MinStack {
 	return MinStack{}
 }
 
-func (this *MinStack) Push(val int) {
-	min := this.GetMin()
+// Push ...
+func (s *MinStack) Push(val int) {
+	min := s.GetMin()
 	if val < min {
 		min = val
 	}
 
-	this.Nodes = append(this.Nodes, &Node{
+	s.Nodes = append(s.Nodes, &Node{
 		Value: val,
 		Min:   min,
 	})
 }
 
-func (this *MinStack) Pop() {
-	if len(this.Nodes) == 0 {
+// Pop ...
+func (s *MinStack) Pop() {
+	if len(s.Nodes) == 0 {
 		return
 	}
 
-	this.Nodes = this.Nodes[:len(this.Nodes)-1]
+	s.Nodes = s.Nodes[:len(s.Nodes)-1]
 }
 
-func (this *MinStack) Top() int {
-	if len(this.Nodes) == 0 {
+// Top ...
+func (s *MinStack) Top() int {
+	if len(s.Nodes) == 0 {
 		return 0
 	}
 
-	return this.Nodes[len(this.Nodes)-1].Value
+	return s.Nodes[len(s.Nodes)-1].Value
 }
 
-func (this *MinStack) GetMin() int {
-	if len(this.Nodes) == 0 {
+// GetMin ...
+func (s *MinStack) GetMin() int {
+	if len(s.Nodes) == 0 {
 		return math.MaxInt32
 	}
 
-	return this.Nodes[len(this.Nodes)-1].Min
+	return s.Nodes[len(s.Nodes)-1].Min
 }

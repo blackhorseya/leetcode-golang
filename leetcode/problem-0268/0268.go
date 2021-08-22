@@ -1,4 +1,4 @@
-package problem_0268
+package problem
 
 func missingNumber(nums []int) int {
 	top := 1

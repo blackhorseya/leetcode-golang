@@ -1,4 +1,4 @@
-package problem_0021
+package problem
 
 import (
 	"github.com/blackhorseya/leetcode-golang/pkg/models"

@@ -1,4 +1,4 @@
-package problem_0344
+package problem
 
 func reverseString(s []byte) {
 	left, right := 0, len(s)-1

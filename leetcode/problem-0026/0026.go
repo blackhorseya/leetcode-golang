@@ -1,4 +1,4 @@
-package problem_0026
+package problem
 
 func removeDuplicates(nums []int) int {
 	ret := 1
