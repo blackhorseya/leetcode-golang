@@ -21,7 +21,7 @@ func Test_findDisappearedNumbers(t *testing.T) {
 		},
 		{
 			name: "[1,1] then [2]",
-			args: args{nums: []int{l1, 1}},
+			args: args{nums: []int{1, 1}},
 			want: []int{2},
 		},
 	}

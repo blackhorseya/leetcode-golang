@@ -1,21 +1,15 @@
 package problem_0448
 
-func contains(nums []int, target int) bool {
+func findDisappearedNumbers(nums []int) []int {
+	l := make([]int, len(nums) + 1)
 	for _, num := range nums {
-		if num == target {
-			return true
-		}
+		l[num] += 1
 	}
 
-	return false
-}
-
-func findDisappearedNumbers(nums []int) []int {
 	var ret []int
-	want := len(nums)
-	for i := 1; i <= want; i++ {
-		if !contains(nums, i) {
-			ret = append(ret, i)
+	for i, val := range l[1:] {
+		if val == 0 {
+			ret = append(ret, i+1)
 		}
 	}
 
