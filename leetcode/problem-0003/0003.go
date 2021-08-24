@@ -1,4 +1,4 @@
-package problem_0003
+package problem
 
 func lengthOfLongestSubstring(s string) int {
 	asc := make([]int, 128)
