@@ -1,5 +1,10 @@
 package listnode
 
+import (
+	"fmt"
+	"strings"
+)
+
 // ListNode is a node of linked list
 type ListNode struct {
 	Value int
@@ -20,4 +25,15 @@ func NewFromSlice(slice []int) *ListNode {
 	}
 
 	return nil
+}
+
+func (l *ListNode) String() string {
+	slice := make([]string, 0)
+	current := l
+	for current != nil {
+		slice = append(slice, fmt.Sprintf("%d", current.Value))
+		current = current.Next
+	}
+
+	return strings.Join(slice, "->")
 }
