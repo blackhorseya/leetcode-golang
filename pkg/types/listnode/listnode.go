@@ -37,3 +37,15 @@ func (l *ListNode) String() string {
 
 	return strings.Join(slice, "->")
 }
+
+func (l *ListNode) Append(val int) {
+	current := l
+	for current.Next != nil {
+		current = current.Next
+	}
+
+	current.Next = &ListNode{
+		Value: val,
+		Next:  nil,
+	}
+}
