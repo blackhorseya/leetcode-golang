@@ -1,4 +1,4 @@
-package leetcode_golang
+package problems
 
 // ListNode is a singly-linked list.
 type ListNode struct {

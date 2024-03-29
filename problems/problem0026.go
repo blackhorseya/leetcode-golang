@@ -1,4 +1,4 @@
-package leetcode_golang
+package problems
 
 func removeDuplicates(nums []int) int {
 	k := 1

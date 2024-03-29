@@ -1,4 +1,4 @@
-package leetcode_golang
+package problems
 
 func climbStairs(n int) int {
 	if n == 1 {

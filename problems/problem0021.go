@@ -1,4 +1,4 @@
-package leetcode_golang
+package problems
 
 func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
 	if list1 == nil {
