@@ -1,9 +1,4 @@
-package main
-
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+package leetcode_golang
 
 func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
 	if list1 == nil {
