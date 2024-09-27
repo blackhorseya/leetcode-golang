@@ -1,3 +1,3 @@
 module github.com/blackhorseya/leetcode-golang
 
-go 1.15
+go 1.22
