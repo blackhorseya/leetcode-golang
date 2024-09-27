@@ -6,16 +6,16 @@ func inorderTraversal(root *TreeNode) []int {
 	}
 
 	var res []int
-	inOrder(root, &res)
+	inOrderHelper(root, &res)
 	return res
 }
 
-func inOrder(node *TreeNode, res *[]int) {
+func inOrderHelper(node *TreeNode, res *[]int) {
 	if node == nil {
 		return
 	}
 
-	inOrder(node.Left, res)
+	inOrderHelper(node.Left, res)
 	*res = append(*res, node.Val.(int))
-	inOrder(node.Right, res)
+	inOrderHelper(node.Right, res)
 }
