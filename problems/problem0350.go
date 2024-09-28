@@ -1,5 +1,8 @@
 package problems
 
+// intersect 交集運算
+// Time complexity: O(n+m)
+// Space complexity: O(min(n,m))
 func intersect(nums1 []int, nums2 []int) []int {
 	if len(nums1) < len(nums2) { // 確保 nums1 是較長的 slice
 		nums1, nums2 = nums2, nums1
@@ -28,4 +31,8 @@ func intersect(nums1 []int, nums2 []int) []int {
 	}
 
 	return res
+}
+
+func intersect2(nums1 []int, nums2 []int) []int {
+	panic("implement me")
 }
