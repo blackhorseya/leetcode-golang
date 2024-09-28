@@ -1,5 +1,9 @@
 package problems
 
+import (
+	"sort"
+)
+
 // intersect 交集運算
 // Time complexity: O(n+m)
 // Space complexity: O(min(n,m))
@@ -33,6 +37,30 @@ func intersect(nums1 []int, nums2 []int) []int {
 	return res
 }
 
+// intersect2 交集運算
+// Time complexity: O(nlogn + mlogm)
+// Space complexity: O(1)
 func intersect2(nums1 []int, nums2 []int) []int {
-	panic("implement me")
+	if len(nums1) < len(nums2) { // 確保 nums1 是較長的 slice
+		nums1, nums2 = nums2, nums1
+	}
+
+	sort.Ints(nums1) // O(nlogn)
+	sort.Ints(nums2) // O(mlogm)
+
+	i, j := 0, 0
+	res := []int{}
+	for i < len(nums1) && j < len(nums2) {
+		if nums1[i] == nums2[j] {
+			res = append(res, nums1[i])
+			i++
+			j++
+		} else if nums1[i] < nums2[j] {
+			i++
+		} else {
+			j++
+		}
+	}
+
+	return res
 }

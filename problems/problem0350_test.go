@@ -29,7 +29,7 @@ func Test_intersect(t *testing.T) {
 				nums1: []int{4, 9, 5},
 				nums2: []int{9, 4, 9, 8, 4},
 			},
-			want: []int{9, 4},
+			want: []int{4, 9},
 		},
 		{
 			name: "no intersection",
@@ -90,7 +90,7 @@ func Test_intersect(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := intersect(tt.args.nums1, tt.args.nums2); !reflect.DeepEqual(got, tt.want) {
+			if got := intersect2(tt.args.nums1, tt.args.nums2); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("intersect() = %v, want %v", got, tt.want)
 			}
 		})
