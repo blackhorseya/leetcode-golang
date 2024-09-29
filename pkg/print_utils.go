@@ -2,6 +2,8 @@ package pkg
 
 import (
 	"fmt"
+	"strconv"
+	"strings"
 )
 
 // PrintTree 打印二叉树
@@ -56,4 +58,18 @@ func showTrunk(t *trunk) {
 
 	showTrunk(t.prev)
 	fmt.Print(t.str)
+}
+
+// PrintLinkedList 打印链表
+func PrintLinkedList(node *ListNode) {
+	if node == nil {
+		return
+	}
+	var builder strings.Builder
+	for node.Next != nil {
+		builder.WriteString(strconv.Itoa(node.Val) + " -> ")
+		node = node.Next
+	}
+	builder.WriteString(strconv.Itoa(node.Val))
+	fmt.Println(builder.String())
 }
