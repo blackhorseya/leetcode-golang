@@ -1,4 +1,4 @@
-package problems
+package pkg
 
 import (
 	"fmt"
