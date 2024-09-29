@@ -5,3 +5,7 @@ clean:
 .PHONY: test-with-coverage
 test-with-coverage:
 	@sh $(shell pwd)/scripts/go.test.sh
+
+.PHONY: test
+test:
+	go test -v ./...
