@@ -5,6 +5,8 @@ import (
 )
 
 // threeSum 回溯演算法
+// Time complexity: O(n^2)
+// Space complexity: O(n)
 func threeSum(nums []int) [][]int {
 	var res [][]int
 	sort.Ints(nums)
@@ -42,6 +44,46 @@ func threeSum(nums []int) [][]int {
 	}
 
 	backtrack(0, []int{}, 0)
+
+	return res
+}
+
+// threeSum2 雙指針演算法
+// Time complexity: O(n^2)
+// Space complexity: O(n)
+func threeSum2(nums []int) [][]int {
+	var res [][]int
+	sort.Ints(nums)
+
+	for i := 0; i < len(nums)-2; i++ {
+		// 跳過重複的數字
+		if i > 0 && nums[i] == nums[i-1] {
+			continue
+		}
+
+		l, r := i+1, len(nums)-1
+		for l < r {
+			sum := nums[i] + nums[l] + nums[r]
+			if sum == 0 {
+				res = append(res, []int{nums[i], nums[l], nums[r]})
+
+				// 跳過重複的數字
+				for l < r && nums[l] == nums[l+1] {
+					l++
+				}
+				for l < r && nums[r] == nums[r-1] {
+					r--
+				}
+
+				l++
+				r--
+			} else if sum < 0 {
+				l++
+			} else {
+				r--
+			}
+		}
+	}
 
 	return res
 }
