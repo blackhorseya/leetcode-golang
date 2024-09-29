@@ -3,6 +3,8 @@ package problems
 import (
 	"reflect"
 	"testing"
+
+	. "github.com/blackhorseya/leetcode-golang/pkg"
 )
 
 func Test_mergeTwoLists(t *testing.T) {

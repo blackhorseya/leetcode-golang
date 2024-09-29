@@ -1,5 +1,9 @@
 package problems
 
+import (
+	. "github.com/blackhorseya/leetcode-golang/pkg"
+)
+
 func reverseList(head *ListNode) *ListNode {
 	prev := (*ListNode)(nil)
 	current := head
