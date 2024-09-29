@@ -15,16 +15,16 @@ func Test_isPalindrome(t *testing.T) {
 		args args
 		want bool
 	}{
-		// {
-		// 	name: "example 1",
-		// 	args: args{head: ArrayToLinkedList([]int{1, 2, 2, 1})},
-		// 	want: true,
-		// },
-		// {
-		// 	name: "example 2",
-		// 	args: args{head: ArrayToLinkedList([]int{1, 2})},
-		// 	want: false,
-		// },
+		{
+			name: "example 1",
+			args: args{head: ArrayToLinkedList([]int{1, 2, 2, 1})},
+			want: true,
+		},
+		{
+			name: "example 2",
+			args: args{head: ArrayToLinkedList([]int{1, 2})},
+			want: false,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
