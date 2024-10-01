@@ -1,6 +1,5 @@
 package problem0034
 
-// searchRange
 func searchRange(nums []int, target int) []int {
 	return []int{
 		binarySearchLeftEdge(nums, target),
@@ -54,4 +53,30 @@ func binarySearchInsertion(nums []int, target int) int {
 	}
 	// 返回插入點 i
 	return i
+}
+
+func searchRange2(nums []int, target int) []int {
+	left, right := -1, -1
+
+	for i, j := 0, len(nums)-1; i <= j; {
+		if left == -1 {
+			if nums[i] == target {
+				left = i
+			} else {
+				i++
+			}
+		}
+		if right == -1 {
+			if nums[j] == target {
+				right = j
+			} else {
+				j--
+			}
+		}
+		if left != -1 && right != -1 {
+			break
+		}
+	}
+
+	return []int{left, right}
 }
