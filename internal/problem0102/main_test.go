@@ -29,12 +29,12 @@ func Test_levelOrder(t *testing.T) {
 		{
 			name: "test case 3",
 			args: args{root: SliceToTree([]any{})},
-			want: [][]int{},
+			want: nil,
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := levelOrder(tt.args.root); !reflect.DeepEqual(got, tt.want) {
+			if got := levelOrder2(tt.args.root); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("levelOrder() = %v, want %v", got, tt.want)
 			}
 		})
